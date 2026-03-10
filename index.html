@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Carta de Bienvenida</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#0b1d3a;
+color:white;
+text-align:center;
+padding:80px;
+}
+
+.carta{
+background:rgba(0,0,0,0.5);
+padding:40px;
+border-radius:10px;
+width:60%;
+margin:auto;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="carta">
+
+<h1 id="empresa"></h1>
+
+<p><b>Fecha:</b> <span id="fecha"></span></p>
+
+<h2>Bienvenido <span id="empleado"></span></h2>
+
+<p id="mensaje"></p>
+
+<br>
+
+<p>Atentamente</p>
+<h3 id="emisor"></h3>
+
+</div>
+
+<script>
+
+fetch("carta.json")
+.then(response => response.json())
+.then(data => {
+
+document.getElementById("empresa").innerText = data.cartaBienvenida.empresa.nombre
+document.getElementById("fecha").innerText =
+data.cartaBienvenida.fecha.dia + " " +
+data.cartaBienvenida.fecha.mes + " " +
+data.cartaBienvenida.fecha.anio
+
+document.getElementById("empleado").innerText =
+data.cartaBienvenida.empleado.nombre
+
+document.getElementById("mensaje").innerText =
+data.cartaBienvenida.mensaje
+
+document.getElementById("emisor").innerText =
+data.cartaBienvenida.emisor.nombre
+
+})
+
+</script>
+
+</body>
+</html>
