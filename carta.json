@@ -1,0 +1,21 @@
+{
+  "cartaBienvenida": {
+    "empresa": {
+      "nombre": "Innovatech Solutions",
+      "departamento": "Desarrollo de Software"
+    },
+    "fecha": {
+      "dia": 10,
+      "mes": "Marzo",
+      "anio": 2026
+    },
+    "empleado": {
+      "nombre": "Maria de Jesus Martinez Garcia"
+    },
+    "mensaje": "Nos complace darte la bienvenida a Innovatech Solutions. Estamos muy contentos de que formes parte del equipo de Desarrollo de Software. Confiamos en que tu talento y dedicación contribuirán al crecimiento de la empresa y al éxito de nuestros proyectos tecnológicos.",
+    "emisor": {
+      "nombre": "Mariana Lisbeth Espino Elias",
+      "cargo": "Gerente de Recursos Humanos"
+    }
+  }
+}

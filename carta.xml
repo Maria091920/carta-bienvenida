@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cartaBienvenida>
+    <empresa>
+        <nombre>Innovatech Solutions</nombre>
+        <departamento>Desarrollo de Software</departamento>
+    </empresa>
+
+    <fecha>
+        <dia>10</dia>
+        <mes>Marzo</mes>
+        <anio>2026</anio>
+    </fecha>
+
+    <empleado>
+        <nombre>Maria de Jesus Martinez Garcia</nombre>
+    </empleado>
+
+    <mensaje>
+        Nos complace darte la bienvenida a Innovatech Solutions.
+        Estamos muy contentos de que formes parte del equipo de Desarrollo de Software.
+        Confiamos en que tu talento y dedicación contribuirán al crecimiento de la empresa
+        y al éxito de nuestros proyectos tecnológicos.
+    </mensaje>
+
+    <emisor>
+        <nombre>Mariana Lisbeth Espino Elias</nombre>
+        <cargo>Gerente de Recursos Humanos</cargo>
+    </emisor>
+</cartaBienvenida>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Carta de Bienvenida</title>
+
+<style>
+
+body{
+margin:0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background: linear-gradient(135deg,#141E30,#243B55);
+color:white;
+}
+
+.carta{
+background:rgba(255,255,255,0.05);
+backdrop-filter: blur(10px);
+padding:50px;
+border-radius:15px;
+width:60%;
+max-width:750px;
+box-shadow:0 0 30px rgba(0,0,0,0.6);
+text-align:center;
+animation: aparecer 1s ease;
+}
+
+@keyframes aparecer{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1{
+letter-spacing:2px;
+font-size:34px;
+margin-bottom:10px;
+}
+
+.fecha{
+font-size:14px;
+opacity:0.8;
+margin-bottom:25px;
+}
+
+h2{
+margin-top:10px;
+font-weight:400;
+}
+
+.mensaje{
+margin-top:25px;
+line-height:1.7;
+font-size:18px;
+}
+
+.firma{
+margin-top:40px;
+font-size:18px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="carta">
+
+<h1 id="empresa"></h1>
+
+<div class="fecha">
+Fecha: <span id="fecha"></span>
+</div>
+
+<h2>Bienvenido <span id="empleado"></span></h2>
+
+<p class="mensaje" id="mensaje"></p>
+
+<div class="firma">
+Atentamente<br>
+<span id="emisor"></span>
+</div>
+
+</div>
+
+<script>
+
+fetch("carta.json")
+.then(response => response.json())
+.then(data => {
+
+document.getElementById("empresa").innerText =
+data.cartaBienvenida.empresa.nombre
+
+document.getElementById("fecha").innerText =
+data.cartaBienvenida.fecha.dia + " " +
+data.cartaBienvenida.fecha.mes + " " +
+data.cartaBienvenida.fecha.anio
+
+document.getElementById("empleado").innerText =
+data.cartaBienvenida.empleado.nombre
+
+document.getElementById("mensaje").innerText =
+data.cartaBienvenida.mensaje
+
+document.getElementById("emisor").innerText =
+data.cartaBienvenida.emisor.nombre
+
+})
+
+</script>
+
+</body>
+</html>
